@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <script type="text/javascript" src="app.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+  <body>
+    <form name ="sendMessage">
+      <h2 style="text-align:center; font-size: 37px; margin-top: 20px; margin-bottom: 20px;">Directions around Gainesville</h2>
+			<div class="user2Lang">
+	      <h5 class="languageSelect user2Text">Choose User 1 Language</h5>
+	    	<select class="languageSelect user2Lang" id='toLangSelect' onchange="updateUser2Lang()"></select><br>
+			</div>
+			<div class="user1Lang">
+	      <h5 class="languageSelect user1Text">Choose User 2 Language</h5>
+	      <select class="languageSelect user1Lang" id='fromLangSelect' onchange="updateUser1Lang()"></select><br>
+			</div>
+    </form>
+		<div class="speakingText">
+			<h5>Who is speaking?</h5>
+		</div>
+		<div class="onoffswitch">
+	    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onclick="switchUsers()" checked>
+	    <label class="onoffswitch-label" for="myonoffswitch">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span>
+	    </label>
+		</div>
+
+
+		<div class="chatbox">
+			<div class="chatlogs">
+				<!-- The chats go in here -->
+			</div>
+
+			<div class="chat-form">
+					<textarea id="text" placeholder="Write your message here" onkeypress="pressEnter(event)"></textarea>
+					<i id='sendButton' class="material-icons" onClick="convertMessage()">send</i>
+			</div>
+		</div>
+		<div class="container">
+  		<a href="https://gate2home.com/" target="_blank">Additional keyboards</a>
+			<a href="https://ufl.qualtrics.com/jfe/form/SV_eVaLgu1NrBIDvkF" target="_blank">Complete Interaction</a>
+  		<a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+		</div>
+  </body>
+
+
+</html>
